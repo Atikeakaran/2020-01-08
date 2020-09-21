@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button id="button">click me</button>
+
+
+    <script>
+        document.getElementById('button').onclick = () => {
+            const number = () => 
+                Math.floor(Math.random() * 256);
+
+                var renk = `rgb(${number()}, ${number()}, ${number()}) `;
+                console.log(renk);
+
+                document.body.style.background=renk;
+            
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!-- 
+load
+click
+dbclick
+change
+mouseover
+mouseout
+mouseenter
+mouseleave
+keypress
+focus
+resize
+scroll
+submit
+toggle 
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<!-- 
+            ----1. yöntem---- 
+            <Tag onevent = "function()"
+            script -> function() -fonksiyonun kendi 
+
+
+<body onload="myFunc()">
+<h1>Merhaba Dünya</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+
+
+<script>
+function myFunc(){
+    alert(`sayfa yüklendi`)
+}
+</script>
+</body> 
+
+            ----2. yöntem---- 
+            <Tag>
+            script :document.getElementId().onevent=function(){} 
+
+<body id="alertLoad">
+<h1>Merhaba Dünya</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+
+<script>
+    document.getElementById(`alertLoad`).onload=function(){
+        alert(`sayfa yüklendi`);
+    }
+</script>
+
+            ----3. yöntem---- 
+             -->
+
+<body>
+<h1>Merhaba Dünya</h1>
+<p>Lorem ipsum dolor sit amet.</p>
+
+<script>
+    document.body.addEventListener("load",myFunction);
+    function myFunction(){
+        alert(`sayfa yüklendi`);
+    }
+</script> 

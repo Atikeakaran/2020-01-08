@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!-- Click event     1. Yöntem
+
+
+<p id="text">Lorem ipsum dolor sit amet.</p>
+<button id="button" onclick="myFunc()"> click me</button>
+
+<script>
+function myFunc(){
+    document.getElementById('text').style.color='red'
+    document.getElementById('button').style.backgroundColor='blue'
+}
+</script>
+-->
+
+
+<!-- Click event     2. Yöntem
+
+
+<p id="text">Lorem ipsum dolor sit amet.</p>
+<button id="button" > click me</button>
+
+<script>
+document.getElementById('button').onclick=()=>{
+    document.getElementById('text').style.color='red'
+}
+
+// onclick=Myfunc() olarak parantezleri yerleştirirsek fonksiyon kendinden çalışır.
+//parantez olmazise benim istediğimde çalışacaktır.
+
+
+document.getElementById('button').onclick= myFunc;
+function myFunc(){
+    document.getElementById('text').style.color='yellow'
+}
+
+</script>
+-->
+
+<!-- Click event     3. Yöntem
+-->
+
+<p id="text">Lorem ipsum dolor sit amet.</p>
+<button id="button" > click me</button>
+
+<script>
+document.getElementById('button').addEventListener('click',myFunction);
+
+
+function myFunction(){
+    document.getElementById('text').style.color='red'
+    }
+</script>
+
+
+
+
+</body>
+
+</html>

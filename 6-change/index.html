@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Toplantıya katılım durumunuzu bildiriniz</h1>
+    <form>
+        <label for="isim">Isminiz</label>
+        <input type="text" id="isim">
+        <br><br>
+        <label for="soyisim">SoyIsminiz</label>
+        <input type="text" id="soyisim">
+        <br><br>
+        <label for="evet">Evet</label>
+        <input type="Radio" id="evet" value="evet">
+
+    </form>
+    <br><br>
+    <button id="button">Gönder</button>
+
+    <ul id="liste">
+        <li>İsim, Soyisim, Katılım Durumu :</li>
+    </ul>
+
+    <script>
+
+        var sahis = 'Ahmet';
+        var sahisSoyad = 'Yavaş';
+        var katilim;
+
+        document.getElementById('isim').onchange = () => {
+            sahis = document.getElementById('isim').value;
+            // console.log(sahis);
+        }
+
+        document.getElementById('soyisim').onchange = () => {
+            sahisSoyad = document.getElementById('soyisim').value;
+            // console.log(sahisSoyad);
+        }
+
+        document.getElementById('evet').onchange = () => {
+            katilim = document.getElementById('evet').checked;
+            // console.log(katilim);
+        }
+
+        //katilim = katilim ? 'Evet' : 'Hayir';
+        document.getElementById('button').onclick = () => {
+            document.getElementById('liste').innerHTML += `<li> ${sahis}, ${sahisSoyad}, ${katilim}`;
+            Document.getElementById('isim').value = ' ';
+            Document.getElementById('soyisim').value = ' ';
+            // Document.getElementById('evet').checked = false;
+            sahis = 'Ahmet';
+            sahisSoyad = 'Yavas';
+        }
+
+
+    </script>
+
+</body>
+
+</html>
